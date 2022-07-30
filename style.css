@@ -1,0 +1,171 @@
+/* The * selctor is used to initially set features of all element to zero insead of using normalize caa */
+/* The webpage was designed with mobile first in mind hence the use of @media queries*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background-color: coral;
+}
+.container{
+    background-color: whitesmoke;
+    width: 90vw;
+    max-width: 55em;
+    padding: 70px 30px;
+    position: absolute;
+    left: 50%;
+    top: 1em;
+    align-items: center;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    box-shadow:  20px 10px 20px rgba(179, 225, 179, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+}
+.searchInput{
+    padding: 1em 2em;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.container h1{
+    text-align: center;
+    color: chocolate;
+}
+#userInput{
+    border: none;
+    padding: 1.0em 4em 1em 2em;
+    border-radius: 10px;
+    border-bottom: 5px solid black;
+    font-size: 1em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    outline: none;
+}
+#btn{
+    padding: 1.0em 3em;
+    color: whitesmoke;
+    background-color: coral;
+    outline: none;
+    border-radius: 1.3em;
+    border-color: none;
+    font-size: 1em;
+}
+#btn:hover{
+    color: cadetblue;
+    box-shadow: 20px 10px 20px rgba(179, 225, 179, 0.04);
+}
+img{
+    display: block;
+    width: 50%;
+    margin: 1.5em auto 0 auto;
+
+}
+.someDetails{
+    background-color: coral;
+    position: relative;
+    margin:  auto 0 0;
+    text-align: center;
+    padding: 1.5em;
+}
+.someDetails h3{
+    font-size: 2em;
+    font-weight: 900;
+}
+.someDetails h4{
+    font-size: 1.5em;
+    font-weight: 400;
+}
+#showRecipe{
+    font-size: 1.2em;
+    position: relative;
+    left: 65%;
+    padding: 0.4em;
+    background-color: lightsalmon;
+    border: none;
+    top: 1.3em;
+    font-weight: 600;
+
+}
+#recipes{
+    position: absolute;
+    background-color: beige;
+    min-height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    border-radius: 3em;
+    display: none;
+}
+#recipes pre{
+    white-space: pre-wrap;
+    word-break: break-word;
+    padding: 2em 3em;
+}
+#hideRecipe{
+    font-size: 1em;
+    position: relative;
+    width: 1.7em;
+    height: 1.9em;
+    background-color: chocolate;
+    border: none;
+    top: 1.2em;
+    left: 90%;
+    border-radius: 0.5em;
+
+}
+ul{
+    font-size: 1.5em;
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0.6em 0.5em;
+    padding: 1.2em ;
+}
+#instruction{
+    font-size: 1.2em;
+    font-weight: 600;
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+@media(min-width: 1024px){
+    #userInput{
+        border: none;
+        padding: 1.0em 12em 1.0em 2em;
+        border-bottom: 5px solid coral;
+        font-size: 1.1em;
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        outline: none;
+    }
+    #btn{
+        padding: 1.0em 5em;
+        color: whitesmoke;
+        background-color: coral;
+        outline: none;
+        border-radius: 1em;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        border-color: coral;
+        font-size: 1em;
+        font-weight: 800;
+    }
+    #showRecipe{
+        font-size: 1.2em;
+        position: relative;
+        left: 85%;
+        padding: 0.4em;
+        background-color: lightsalmon;
+        border: none;
+        top: 1.3em;
+        font-weight: 600;
+    
+    }
+    #instruction{
+        font-size: 1.5em;
+    }
+
+}
