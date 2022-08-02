@@ -1,17 +1,24 @@
+// assinging the result variable using DOM to link html id
 let result = document.getElementById("result");
+// assinging the searchbtn variable using DOM to link html id
 let searchBtn = document.getElementById("btn");
 let url = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
 
-
+// event listner to acknowledge and respond when a click action occurs
 searchBtn.addEventListener("click", () =>{
+    // acquiring value of userinput and assigning it to a javascript variable
     let unserInput = document.getElementById("userInput").value;
+    // checks for length of userinput and executes either block of code if either evaluates to true
     if(unserInput.length == 0){
         result.innerHTML = `<h3> Field Can't Be Empty</h3>`;
     }
     else{
+        // fetchs using API with user's specific input
         fetch(url + unserInput)
+        // resolves promise and converts to javascript object notation
 .then(response => response.json())
 .then(data => {
+    // trying to debug the data and understand the different identifiers
     console.log(data);
     let mealDee = data.meals[0];
     console.log(mealDee);
@@ -21,6 +28,7 @@ searchBtn.addEventListener("click", () =>{
     console.log(mealDee.strInstructions);
     let count = 1;
     let ingredients = [];
+    // for loop to iterate over how many ingredients are on the list, as with different recipes comes different numbers of ingredients
     for(let i in mealDee) {
         let ingredient = "";
         let measures = "";
@@ -66,5 +74,3 @@ searchBtn.addEventListener("click", () =>{
 });
     }
 })
-
-
